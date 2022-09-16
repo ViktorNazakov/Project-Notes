@@ -1,0 +1,93 @@
+body {
+  background: linear-gradient(194deg, rgba(2, 0, 36, 0) 0%, rgb(244, 244, 244) 0%, rgb(13, 36, 175) 100%);
+  -webkit-animation: infinite shift-gradient 6s;
+          animation: infinite shift-gradient 6s;
+  background-size: 400% 400%;
+  background-repeat: no-repeat !important;
+  min-height: 100vh;
+}
+
+@-webkit-keyframes shift-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shift-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#mainForm {
+  min-height: 20rem;
+  background-color: rgb(206, 206, 135);
+  box-shadow: 10px 10px 7px rgb(48, 48, 48);
+  transform: rotate(-2deg);
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  max-width: 25rem;
+  z-index: 1;
+}
+#mainForm::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgb(206, 206, 135);
+  border: 1px solid gray;
+  z-index: -1;
+  transform: rotate(1deg);
+  left: 0;
+}
+#mainForm * {
+  background-color: transparent;
+}
+#mainForm input {
+  padding: 10px;
+  position: relative;
+}
+#mainForm input::-moz-placeholder {
+  text-align: center;
+}
+#mainForm input:-ms-input-placeholder {
+  text-align: center;
+}
+#mainForm input::placeholder {
+  text-align: center;
+}
+#mainForm input ~ svg {
+  stroke-dashoffset: 700;
+  stroke-dasharray: 700;
+}
+#mainForm input:focus {
+  border: none !important;
+  box-shadow: none !important;
+  transition: 0.5s;
+  outline: none !important;
+}
+#mainForm input:focus ~ svg {
+  stroke-dashoffset: 0;
+  transition: 0.5s;
+}
+
+#saveBtn:hover p {
+  color: green;
+  transition: 0.5s;
+}
+
+#formContainer {
+  min-height: 100vh;
+}/*# sourceMappingURL=add-css.css.map */
